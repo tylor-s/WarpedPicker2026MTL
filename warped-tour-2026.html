@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warped Tour 2026 — Band Sorter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ SORTER VIEW ═══════════════════════════════════ -->
+<div id="sorter-view">
+  <header>
+    <div class="logo">Warped Tour 2026 · Montréal</div>
+    <div class="header-right">
+      <span id="rated-count">0 rated</span>
+      <span id="progress-text">1 / 81</span>
+    </div>
+  </header>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+  <div class="main-content">
+
+    <div class="band-display">
+      <div class="band-num" id="band-num">BAND 001</div>
+      <div class="band-name-text" id="band-name"></div>
+    </div>
+
+    <div class="stream-row" id="stream-row">
+      <span class="stream-label">Listen on</span>
+      <a id="spotify-link" href="#" target="_blank" rel="noopener" class="stream-btn btn-spotify">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.36-.66.48-1.021.24-2.82-1.74-6.36-2.1-10.561-1.14-.418.12-.779-.18-.899-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.479.66.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.56 18.72 12.84c.361.18.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a id="ytm-link" href="#" target="_blank" rel="noopener" class="stream-btn btn-ytm">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm0 19.104c-3.924 0-7.104-3.18-7.104-7.104S8.076 4.896 12 4.896s7.104 3.18 7.104 7.104-3.18 7.104-7.104 7.104zM9.684 15.54V8.46L15.816 12l-6.132 3.54z"/></svg>
+        YT Music
+      </a>
+      <a id="apple-link" href="#" target="_blank" rel="noopener" class="stream-btn btn-apple">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208a5.494 5.494 0 00-.39 1.548c-.06.463-.068.932-.078 1.399v13.689c.01.34.02.68.05 1.018.065.832.229 1.645.63 2.394.618 1.153 1.579 1.901 2.839 2.268.502.146 1.017.208 1.535.232.267.013.534.02.8.02h12.262c.34-.01.68-.02 1.018-.05.64-.07 1.26-.217 1.84-.512 1.276-.638 2.108-1.66 2.48-3.046.15-.56.217-1.135.23-1.713.007-.268.014-.534.014-.8v-13.7c-.003-.338-.017-.674-.045-1.007zm-8.903 14.428c0 .28-.006.55-.037.82a3.87 3.87 0 01-.274 1.129c-.354.814-.951 1.378-1.801 1.654-.355.115-.724.165-1.099.171-.29.006-.574-.016-.852-.113-.657-.23-1.141-.666-1.434-1.296a3.265 3.265 0 01-.277-1.1c-.035-.394-.01-.782.104-1.16.28-.92.94-1.492 1.876-1.724.364-.091.735-.13 1.11-.113.248.011.493.042.732.107v-7.64l5.957-1.455v6.278c0 .272-.006.543-.038.812a3.86 3.86 0 01-.267 1.107c-.348.836-.95 1.408-1.81 1.688a3.82 3.82 0 01-1.09.168c-.29.006-.575-.016-.852-.113-.655-.227-1.138-.658-1.432-1.286a3.248 3.248 0 01-.276-1.096c-.036-.392-.012-.78.1-1.158.278-.924.94-1.502 1.878-1.735.36-.089.73-.128 1.104-.112.253.012.502.044.746.11v-3.08l-5.957 1.455v9.017z"/></svg>
+        Apple Music
+      </a>
+    </div>
+
+    <div class="tier-section">
+      <div class="tier-prompt">Rate this band</div>
+      <div class="tier-grid" id="tier-grid"></div>
+      <div class="kb-hint">Keyboard: 1–5 to rate · ← → to navigate</div>
+    </div>
+
+    <div class="nav-row">
+      <button class="nav-btn" id="back-btn">← Back</button>
+      <button class="results-nav-btn" onclick="showResults()">View Tier List</button>
+      <button class="nav-btn" id="skip-btn">Next →</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ BAND POPUP ═══════════════════════════════════ -->
+<div id="band-popup">
+  <div class="popup-name" id="popup-band-name"></div>
+  <div class="popup-links" id="popup-links"></div>
+</div>
+
+<!-- ═══════════════════════════════════ RESULTS VIEW ═══════════════════════════════════ -->
+<div id="results-view">
+  <div class="results-header">
+    <div class="results-title">Your Warped Tour Tier List</div>
+    <div class="results-sub">Vans Warped Tour 2026 · Montréal · August 21–22 · Parc Jean-Drapeau</div>
+  </div>
+  <div id="results-content"></div>
+  <div class="results-actions">
+    <button class="btn-primary" onclick="backToSorter()">← Back to Sorting</button>
+    <button class="btn-ghost" onclick="resetAll()">Start Over</button>
+  </div>
+</div>
+
+<script src="bands.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
